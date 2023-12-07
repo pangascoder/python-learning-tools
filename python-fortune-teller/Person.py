@@ -137,6 +137,8 @@ class Person:
   def identifyBirthstone(self):
     birthstone = "No match"
 
+    print(self.birthmonth)
+
     if self.birthmonth == 1:
       birthstone = "Garnet"
     elif self.birthmonth == 2:
@@ -181,6 +183,8 @@ class Person:
   def createFortune(self):
     fortune = "No fortune available."
 
+    print(self.birthdate)
+
     # Aries
     if self.zodiac_sign == Zodiac.Aries:
       if int(self.birthdate) % 2 == 0:
@@ -190,7 +194,7 @@ class Person:
 
     # Taurus
     elif self.zodiac_sign == Zodiac.Taurus:
-      if int(self.birthdate % 2) == 0:
+      if int(self.birthdate) % 2 == 0:
         fortune = "You may find your emotions difficult to deal with, " + self.name + ", especially later in the day. Consider taking an intellectual instead of emotional approach. Your feelings could send you into a drastic mood swing from one end of the spectrum to the other. The thing you really need right now - especially tonight - is balance. Tie up any loose ends to maintain more equilibrium."
       else:
         fortune = "You may have been spending or saving too much money, " + self.name + ". It's clear that a rebalancing is in order if you're to find pleasure rather than eternal frustration. It's a curious phenomenon. It's as though you have lost contact with your body. Yet it's in your body where you will ultimately find your balance. You certainly won't find it in your head!"
